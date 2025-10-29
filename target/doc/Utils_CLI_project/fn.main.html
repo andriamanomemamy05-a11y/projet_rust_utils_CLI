@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Point d’entrée de l’application."><title>main in Utils_CLI_project - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-aa0817cf.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="Utils_CLI_project" data-themes="" data-resource-suffix="" data-rustdoc-version="1.90.0 (1159e78c4 2025-09-14)" data-channel="1.90.0" data-search-js="search-fa3e91e5.js" data-settings-js="settings-5514c975.js" ><script src="../static.files/storage-68b7e25d.js"></script><script defer src="sidebar-items.js"></script><script defer src="../static.files/main-eebb9057.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-32bb7600.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc fn"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../Utils_CLI_project/index.html">Utils_<wbr>CLI_<wbr>project</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">main</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#algorithme" title="Algorithme">Algorithme</a></li></ul></section><div id="rustdoc-modnav"><h2 class="in-crate"><a href="index.html">In crate Utils_<wbr>CLI_<wbr>project</a></h2></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><div class="rustdoc-breadcrumbs"><a href="index.html">Utils_CLI_project</a></div><h1>Function <span class="fn">main</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/Utils_CLI_project/main.rs.html#38-101">Source</a> </span></div><pre class="rust item-decl"><code>pub fn main()</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Point d’entrée de l’application.</p>
+<p>Cette fonction affiche un menu interactif permettant de choisir un utilitaire Linux
+parmi : ls, cat, cp, mv, rm, wc. L’utilisateur peut entrer le numéro correspondant
+ou <code>quit</code> pour quitter l’application.</p>
+<p>L’application boucle tant que l’utilisateur ne choisit pas de quitter.
+Elle gère les entrées invalides en affichant un message d’erreur.</p>
+<h2 id="algorithme"><a class="doc-anchor" href="#algorithme">§</a>Algorithme</h2>
+<ul>
+<li>Boucle infinie jusqu’à ce que l’utilisateur tape <code>quit</code>.</li>
+<li>Affiche le menu avec les différentes options disponibles.</li>
+<li>Demande à l’utilisateur de saisir son choix.</li>
+<li>Lit l’entrée utilisateur et supprime les espaces et retours à la ligne.</li>
+<li>Vérifie si l’entrée est <code>quit</code> : si oui, quitte la boucle et termine le programme.</li>
+<li>Sinon, effectue un <code>match</code> sur la saisie :
+<ul>
+<li><code>"1"</code> : appelle la fonction <code>ls::ls()</code></li>
+<li><code>"2"</code> : appelle la fonction <code>cat::cat()</code></li>
+<li><code>"3"</code> : appelle la fonction <code>cp::cp()</code></li>
+<li><code>"4"</code> : appelle la fonction <code>mv::mv()</code></li>
+<li><code>"5"</code> : appelle la fonction <code>rm::rm()</code></li>
+<li><code>"6"</code> : appelle la fonction <code>wc::wc()</code></li>
+<li>Autre : affiche un message d’erreur et redemande une saisie.</li>
+</ul>
+</li>
+<li>Affiche une ligne vide pour séparer les itérations.</li>
+</ul>
+<p>Ce processus se répète jusqu’à ce que l’utilisateur décide de quitter.</p>
+</div></details></section></div></main></body></html>

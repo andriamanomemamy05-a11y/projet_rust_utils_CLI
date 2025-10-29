@@ -1,0 +1,9 @@
+(function() {
+    var implementors = Object.fromEntries([["Utils_CLI_project",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.90.0/core/marker/trait.Unpin.html\" title=\"trait core::marker::Unpin\">Unpin</a> for <a class=\"struct\" href=\"Utils_CLI_project/cat/struct.Options.html\" title=\"struct Utils_CLI_project::cat::Options\">Options</a>",1,["Utils_CLI_project::cat::Options"]],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.90.0/core/marker/trait.Unpin.html\" title=\"trait core::marker::Unpin\">Unpin</a> for <a class=\"struct\" href=\"Utils_CLI_project/wc/struct.CountResult.html\" title=\"struct Utils_CLI_project::wc::CountResult\">CountResult</a>",1,["Utils_CLI_project::wc::CountResult"]],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.90.0/core/marker/trait.Unpin.html\" title=\"trait core::marker::Unpin\">Unpin</a> for <a class=\"struct\" href=\"Utils_CLI_project/wc/struct.Options.html\" title=\"struct Utils_CLI_project::wc::Options\">Options</a>",1,["Utils_CLI_project::wc::Options"]]]],["Utils_CLI_project",[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.90.0/core/marker/trait.Unpin.html\" title=\"trait core::marker::Unpin\">Unpin</a> for <a class=\"struct\" href=\"Utils_CLI_project/cat/struct.Options.html\" title=\"struct Utils_CLI_project::cat::Options\">Options</a>",1,["Utils_CLI_project::cat::Options"]]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":57,"fragment_lengths":[990,343]}

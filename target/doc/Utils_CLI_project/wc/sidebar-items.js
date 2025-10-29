@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["VERSION"],"fn":["count_content","display_help","display_result","display_version","parse_arguments","parse_command_line","parse_option","process_command","process_file","process_piped_command","process_stdin","unescape","wc"],"struct":["CountResult","Options"]};

@@ -1,0 +1,1 @@
+C:\Users\sarah\Documents\Cours\RUST\Utils_CLI_project\target\release\Utils_CLI_project.exe: C:\Users\sarah\Documents\Cours\RUST\Utils_CLI_project\src\cat.rs C:\Users\sarah\Documents\Cours\RUST\Utils_CLI_project\src\main.rs C:\Users\sarah\Documents\Cours\RUST\Utils_CLI_project\src\wc.rs
