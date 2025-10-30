@@ -1,7 +1,7 @@
 // main.rs
 
 mod cat; // Déclare le module cat.rs
-// mod ls;  // Déclare le module ls.rs (à créer)
+mod ls;  // Déclare le module ls.rs (à créer)
 // mod cp;  // Déclare le module cp.rs (à créer)
 // mod mv;  // Déclare le module mv.rs (à créer)
 // mod rm;  // Déclare le module rm.rs (à créer)
@@ -68,7 +68,7 @@ pub fn main() {
         match choix {
             "1" => {
                 println!("Exécution de ls...");
-                //ls::ls(); // Appel de la fonction ls (à implémenter)
+                ls::ls(); // Appel de la fonction ls (à implémenter)
             }
             "2" => {
                 println!("Exécution de cat...");
