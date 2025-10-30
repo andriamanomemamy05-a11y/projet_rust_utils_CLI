@@ -122,7 +122,7 @@ pub fn main() {
             }
             "5" => {
                 println!("Exécution de rm...");
-                //rm::rm(); // Appel de la fonction rm (à implémenter)
+                rm::rm(); // Appel de la fonction rm (à implémenter)
             }
             "6" => {
                 println!("Exécution de wc...");
