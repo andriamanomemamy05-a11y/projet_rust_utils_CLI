@@ -2,10 +2,11 @@
 
 mod cat; // Déclare le module cat.rs
 mod ls;  // Déclare le module ls.rs (à créer)
-// mod cp;  // Déclare le module cp.rs (à créer)
-// mod mv;  // Déclare le module mv.rs (à créer)
-// mod rm;  // Déclare le module rm.rs (à créer)
 mod wc;  // Déclare le module wc.rs (à créer)
+mod cp;  // Déclare le module cp.rs
+mod mv;  // Déclare le module mv.rs
+mod rm;  // Déclare le module rm.rs (à créer)
+mod head; // Déclare le module head.rs
 
 use std::io::{self, Write};
 
@@ -47,6 +48,7 @@ pub fn main() {
         println!("4) mv");
         println!("5) rm");
         println!("6) wc");
+        println!("7) head");
         println!();
         print!("Votre choix : ");
         io::stdout().flush().unwrap(); // Assure que le prompt s'affiche avant la saisie
@@ -76,11 +78,47 @@ pub fn main() {
             }
             "3" => {
                 println!("Exécution de cp...");
-                //cp::cp(); // Appel de la fonction cp (à implémenter)
+                println!("Syntaxe : [option] <source> <destination>");
+                println!("Options disponibles : -i (interactive), -v (verbose)");
+                print!("Entrez vos arguments : ");
+                io::stdout().flush().unwrap();
+                
+                let mut args_input = String::new();
+                io::stdin()
+                    .read_line(&mut args_input)
+                    .expect("Erreur lors de la lecture de l'entrée");
+                
+                // Parse les arguments en Vec<String>
+                let args: Vec<String> = args_input
+                    .trim()
+                    .split_whitespace()
+                    .map(String::from)
+                    .collect();
+                
+                // Appelle handle_cp avec les arguments
+                cp::handle_cp(&args);
             }
             "4" => {
                 println!("Exécution de mv...");
-                //mv::mv(); // Appel de la fonction mv (à implémenter)
+                println!("Syntaxe : [option] <source> <destination>");
+                println!("Options disponibles : -i (interactive), -v (verbose)");
+                print!("Entrez vos arguments : ");
+                io::stdout().flush().unwrap();
+
+                let mut args_input = String::new();
+                io::stdin()
+                    .read_line(&mut args_input)
+                    .expect("Erreur lors de la lecture de l'entrée");
+
+                // Parse les arguments en Vec<String>
+                let args: Vec<String> = args_input
+                    .trim()
+                    .split_whitespace()
+                    .map(String::from)
+                    .collect();
+
+                // Appelle handle_mv avec les arguments
+                mv::handle_mv(&args);
             }
             "5" => {
                 println!("Exécution de rm...");
@@ -90,6 +128,30 @@ pub fn main() {
                 println!("Exécution de wc...");
                 wc::wc(); // Appel de la fonction wc (à implémenter)
             }
+            "7" => {
+                println!("Exécution de head...");
+                println!("Exécution de head...");
+                println!("Syntaxe : [option] <fichier>");
+                println!("Options disponibles : -n <nombre> (nombre de lignes), -v (verbose)");
+                print!("Entrez vos arguments : ");
+                io::stdout().flush().unwrap();
+
+                let mut args_input = String::new();
+                io::stdin()
+                    .read_line(&mut args_input)
+                    .expect("Erreur lors de la lecture de l'entrée");
+
+                // Parse les arguments en Vec<String>
+                let args: Vec<String> = args_input
+                    .trim()
+                    .split_whitespace()
+                    .map(String::from)
+                    .collect();
+
+                // Appelle handle_head avec les arguments
+                head::handle_head(&args);
+            }
+
             _ => {
                 // Gestion des entrées invalides
                 println!("Option invalide, veuillez réessayer !");
