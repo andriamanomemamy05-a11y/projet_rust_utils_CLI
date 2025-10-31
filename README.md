@@ -4,12 +4,15 @@ Lien du projet public : https://github.com/andriamanomemamy05-a11y/projet_rust_u
 # Projet Rust Utils CLI
 
 L’objectif de ce projet est de créer un utilitaire en ligne de commande capable de reproduire le comportement de plusieurs commandes Linux courantes (telles que ls, cat, cp, mv, rm, wc et head).
+
 Ce travail permet de renforcer la maîtrise du langage Rust en manipulant ses concepts fondamentaux tels que la gestion de la mémoire, le système de modules, les entrées/sorties, et la gestion des erreurs.
+
 Il constitue également une mise en pratique des bonnes pratiques de programmation système, tout en illustrant la capacité à produire une documentation technique complète et structurée en utilisant l’outil rustdoc.
 
 # Documentation du projet
 
 La documentation générée avec rustdoc se trouve dans le répertoire target/doc/
+
 Pour la consulter, il suffit d’ouvrir le fichier index.html situé dans le répertoire target/doc/ avec un navigateur web.
 
 # Lancement du Projet
@@ -155,7 +158,7 @@ test_mv_for_rename.txt toto
 
 ---
 
-## 📖 Commande `head`
+## Commande `head`
 
 ### Afficher les 10 premières lignes
 
