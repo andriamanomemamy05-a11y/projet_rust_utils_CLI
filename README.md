@@ -59,6 +59,22 @@ Choisir ensuite la fonctionnalité souhaitée dans le menu.
 
 ---
 
+## Commande `ls`
+
+### Liste le contenu d'un dossier avec un chemin absolu
+
+```bash
+ls chemin_absolu du dossier
+```
+
+Exemple :
+
+```bash
+ls "C:\Users\PERSO\Documents\dossier_test"
+```
+
+---
+
 ## Commande `cp`
 
 ### Copier un fichier
