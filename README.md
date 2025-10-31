@@ -438,3 +438,41 @@ Exemple :
 wc -cml test_head.txt
 echo "Hello world !" | wc -cml
 ```
+
+
+---
+
+## Commande `rm`
+
+### Supprimer un seul fichier spécifiques dans un dossier
+```bash
+rm chemin_absolu\nom_fichier_a_supprimer
+```
+
+Exemple :
+
+```bash
+rm "C:\Users\PERSO\Documents\dossier_test\file_test.txt"
+```
+
+### Supprimer un dossier et leur contenu de manière récursive '-r'
+```bash
+rm -r chemin_absolu\nom_dossier
+```
+
+Exemple :
+
+```bash
+rm -r "C:\Users\PERSO\Documents\nom_dossier"
+```
+
+### Supprimer le dossier courant "."
+```bash
+rm -r .
+```
+
+Exemple :
+
+```bash
+rm -r .
+```
