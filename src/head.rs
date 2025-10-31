@@ -88,13 +88,12 @@ fn head(flag: Option<&str>, num: Option<&str>, filename: &str) {
 /// ## Fonctionnement :
 /// 1. Vérifie que l’utilisateur a bien passé un nom de fichier.  
 /// 2. Détermine si un flag (`-n` ou `-v`) est présent.  
-/// 3. Si le flag `-n` est utilisé, récupère également le nombre de lignes.  
-/// 4. Appelle la fonction [`head`] avec les bons paramètres.
+/// 3. Appelle la fonction [`head`] avec les bons paramètres.
 pub fn handle_head(args: &[String]) {
     /*
-        Vérifie qu’un fichier a été fourni en argument :
+        Vérifie qu'un fichier a été fourni en argument :
         - Si la liste des arguments est vide,
-          affiche un message d’erreur et propose d’utiliser "head --help".
+          affiche un message d'erreur et propose d'utiliser "head --help".
      */
     if args.is_empty() {
         eprintln!("head: missing file operand");
@@ -107,19 +106,34 @@ pub fn handle_head(args: &[String]) {
     let filename;
 
     /*
-        Si l’utilisateur a passé un flag :
-        - Si le flag est "-n", on récupère également le nombre et le nom du fichier.
-        - Si le flag est "-v", on ne récupère que le nom du fichier.
-        - Sinon, on considère que l’utilisateur a simplement passé un fichier sans option.
+        Analyse des arguments selon les cas possibles :
+        1. head fichier.txt          → args.len() == 1
+        2. head -v fichier.txt       → args.len() == 2
+        3. head -n 5 fichier.txt     → args.len() == 3
     */
-    if args.len() >= 3 && (args[0] == "-n" || args[0] == "-v") {
-        flag = Some(args[0].as_str());
-        
+    
+    // Cas 1 : Premier argument est un flag
+    if args[0].starts_with('-') {
         if args[0] == "-n" {
+            if args.len() < 3 {
+                eprintln!("head: option requires an argument -- 'n'");
+                eprintln!("Usage: head -n <nombre> <fichier>");
+                return;
+            }
+            flag = Some("-n");
             num = Some(args[1].as_str());
             filename = &args[2];
-        } else {
+        } else if args[0] == "-v" {
+            if args.len() < 2 {
+                eprintln!("head: missing file operand after '-v'");
+                return;
+            }
+            flag = Some("-v");
             filename = &args[1];
+        } else {
+            eprintln!("head: invalid option -- '{}'", &args[0]);
+            eprintln!("Try 'head --help' for more information.");
+            return;
         }
     } else {
         filename = &args[0];
