@@ -11,6 +11,12 @@ Il constitue également une mise en pratique des bonnes pratiques de programmati
 
 # Documentation du projet
 
+Pour obtenir la documentation du projet:
+
+```bash
+cargo run
+```
+
 La documentation générée avec rustdoc se trouve dans le répertoire target/doc/
 
 Pour la consulter, il suffit d’ouvrir le fichier index.html situé dans le répertoire target/doc/ avec un navigateur web.
@@ -49,7 +55,7 @@ Des fichiers et répertoires de tests sont fournis
 
 ## Lancement
 
-Se placer dans le répertoire `target/test_cp_mv_head` puis exécuter :
+Se placer dans le répertoire `tests/test_cp_mv_head` puis exécuter :
 
 ```bash
 cargo run
@@ -315,6 +321,7 @@ echo "Hello world !" | cat -T
 ```
 
 ### Affiche les caractères non imprimables sauf les tabulations et fins de ligne `-v`
+
 ```bash
 cat -v <chemin_fichier_source>
 echo "texte" | cat -v
@@ -328,6 +335,7 @@ echo "Hello world !" | cat -v
 ```
 
 ### Combinaison de multiples options
+
 ```bash
 cat -vsE <chemin_fichier_source>
 echo "texte" | cat -vsE
@@ -427,6 +435,7 @@ echo "Hello world !" | wc -L
 ```
 
 ### Combinaison de multiples options
+
 ```bash
 wc -cml <chemin_fichier_source>
 echo "texte" | wc -cml
@@ -439,12 +448,12 @@ wc -cml test_head.txt
 echo "Hello world !" | wc -cml
 ```
 
-
 ---
 
 ## Commande `rm`
 
 ### Supprimer un seul fichier spécifiques dans un dossier
+
 ```bash
 rm chemin_absolu\nom_fichier_a_supprimer
 ```
@@ -456,6 +465,7 @@ rm "C:\Users\PERSO\Documents\dossier_test\file_test.txt"
 ```
 
 ### Supprimer un dossier et leur contenu de manière récursive '-r'
+
 ```bash
 rm -r chemin_absolu\nom_dossier
 ```
@@ -467,6 +477,7 @@ rm -r "C:\Users\PERSO\Documents\nom_dossier"
 ```
 
 ### Supprimer le dossier courant "."
+
 ```bash
 rm -r .
 ```
