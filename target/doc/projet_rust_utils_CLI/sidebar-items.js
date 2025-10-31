@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["main"],"mod":["cat","wc"]};
+window.SIDEBAR_ITEMS = {"fn":["main"],"mod":["cat","cp","head","ls","mv","rm","wc"]};
